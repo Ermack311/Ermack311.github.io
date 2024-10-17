@@ -1,0 +1,81 @@
+.mobile-overlay {
+  width: 420px;
+  height: 100vh;
+  margin: 0;
+  padding: 170px 106px 0 var(--container-padding-x);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+  
+  @include animation(-420,0);
+
+  @include mobile {
+    padding-top: 152px;
+  }
+
+  @include mobile-s {
+    max-width: 320px;
+    padding: 78px 97px 0 var(--container-padding-x);
+  }
+
+  &:modal {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__close-button-wrapper {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin-left: var(--container-padding-x);
+    margin-top: 38px;
+    display: flex;
+    justify-content: end;
+
+    @include mobile {
+      margin-top: 22px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+    @include mobile-s {
+      row-gap: 32px;
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include mobile-s {
+      font-size: 16px;
+    }
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-wrap: nowrap;
+
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-orange);
+      transition-duration: inherit;
+    }
+  }
+}

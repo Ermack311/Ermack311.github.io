@@ -1,0 +1,38 @@
+.cross-round-button {
+  @include reset-button;
+  @include square(24px);
+
+  position: relative;
+  
+  border: var(--border-btn-close-search);
+  border-radius: 50%;
+
+  @include hover{
+    border: var(--border-btn-close-search-hover);
+    &::before,
+    &::after {
+      background-color: var(--color-dark);
+    }
+  }
+
+
+  &::before,
+  &::after {
+    @include abs-center;
+
+    content: "";
+    top: 11px;
+    left: 10px;
+    width: 49%;
+    height: 2px;
+    background-color: var(--color-grey-light);
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}

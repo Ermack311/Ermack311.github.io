@@ -1,0 +1,154 @@
+.slider {
+  position: relative;
+  height: auto;
+  overflow-x: hidden;
+
+  &__line {
+    display: flex;
+    align-items: center;
+    min-height: 620px;
+    transition: all 1s;
+
+    @include desktop {
+      min-height: 668px;
+    }
+
+    @include mobile-m{
+      min-height: 400px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: 20px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__img {
+    min-height: 620px;
+
+    @include desktop {
+      min-height: 668px;
+    }
+
+    @include mobile-m{
+      min-height: 400px;
+    }
+  }
+
+  &__dot {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-grey-light);
+    border-radius: 100%;
+  }
+
+  &__dot:hover {
+    background-color: var(--color-white);
+  }
+
+  &__active-dot {
+    background-color: var(--color-white);
+  }
+
+  &__btn-next img,
+  &__btn-prev img {
+    width: 50px;
+  }
+
+  &__content {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 80px;
+    max-width: 837px;
+    top: 0;
+    left: 0;
+
+    @include desktop {
+      margin-top: 160px;
+    }
+
+    @include tablet {
+      max-width: 770px;
+    }
+
+    @include mobile{
+      margin-inline: 40px;
+      max-width: 588px;
+    }
+
+    @include mobile-m{
+      margin-inline: 20px;
+      margin-top: 60px;
+      max-width: 450px;
+    }
+
+    @include mobile-s{
+      max-width: 250px;
+      
+    }
+
+    &-title {
+      color: var(--color-white);
+      margin-bottom: 24px;
+
+      @include desktop {
+        margin-bottom: 16px;
+        @include fluid-text(60, 50);
+      }
+
+      @include mobile{
+        font-size: 50px;
+      }
+
+      @include mobile-m{
+        @include fluid-text(30, 25);
+      }
+
+      @include mobile-s{
+        @include fluid-text(24, 20);
+        text-align: center;
+      }
+    }
+
+    &-discription {
+      color: #fff;
+
+      @include desktop{
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include mobile-m{
+        font-size: 12px;
+      }
+
+      @include mobile-s{
+        text-align: center;
+      }
+    }
+
+    &-button {
+      margin-top: 90px;
+
+      @include desktop {
+        margin-top: 60px;
+      }
+
+      @include mobile-m{
+        margin-top: 32px;
+      }
+
+      @include mobile-s{
+        margin-inline: 30px;
+      }
+    }
+  }
+}

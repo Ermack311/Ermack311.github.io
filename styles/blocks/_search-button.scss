@@ -1,0 +1,31 @@
+.search-button {
+  @include reset-button;
+  @include square(24px);
+  position: relative;
+  padding: 0;
+  background-color: var(--color-light);
+
+  & > * {
+    @include hover {
+      color: var(--color-orange);
+      transition-duration: var(--transition-duration);
+      
+    }
+  }
+
+  &__image{
+    @include hover{
+      & > rect{
+        fill: var(--color-orange);
+      }
+    }
+  }
+
+  &--active{
+    color: var(--color-orange);
+
+    & > * > rect{
+      fill: var(--color-orange);
+    }
+  }
+}

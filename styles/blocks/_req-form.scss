@@ -1,0 +1,48 @@
+.req-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    color: var(--color-grey-light);
+  }
+
+  &__input {
+    margin-top: 25px;
+    padding-block: 14px;
+    padding-left: 24px;
+    height: 60px;
+    width: 570px;
+    color: var(--color-grey-light);
+    background-color: var(--color-dark-light);
+    border: 0px;
+    border-radius: var(--border-radius);
+
+    @include desktop-m{
+      width: 500px;
+    }
+
+    @include desktop{
+      width: 390px;
+    }
+
+    @include mobile-m{
+      width: 290px;
+    }
+
+    &--textarea {
+      height: 150px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    column-gap: 25px;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+}

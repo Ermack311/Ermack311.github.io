@@ -1,0 +1,45 @@
+:root{
+    --color-dark:#000000;
+    --color-dark-opacity:#00000080;
+    --color-dark-light:#414141;
+    --color-grey:#666666;
+    --color-grey-light:#CACACA;
+    --color-white:#FFFFFF;
+    --color-orange:#FF9900;
+    --color-orange-dark:#E1670E;
+    --color-orange-light:#FFB84D;
+
+    --border:2px solid var(--color-orange);
+    --border-btn-large: 3px solid var(--color-orange);
+    --border-btn-small:1px solid var(--color-dark);
+    --border-btn-close-search: 2px solid var(--color-grey-light);
+    --border-btn-close-search-hover: 2px solid var(--color-dark);
+    --border-radius:16px;
+    --border-radius-large:32px;
+    --border-radius-search: 24px;
+
+    --shadow:0 5px 40px 0 rgba(0, 0, 0, 0.1);
+    --shadow-search: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+
+    --font-family: 'Montserrat', sans-serif;
+    --second-family: "Muller", sans-serif;
+    --third-family: "Inter", sans-serif;
+
+    --container-width: 1770px;
+    --container-padding-x: 75px;
+
+    --section-pading-y: 50px;
+
+    --input-hight:60px;
+    --button-hight:60px;
+
+    --transition-duration: 0.2s;
+
+    @include tablet{
+        --container-padding-x:50px;
+    }
+
+    @include mobile-s{
+        --container-padding-x:15px;
+    }
+}

@@ -1,0 +1,25 @@
+@import
+  'normalize',
+  'fonts',
+  'mixins',
+  'media',
+  'variables',
+  'utils',
+  'globals';
+
+@import
+  'blocks/slider',
+  'blocks/section',
+  'blocks/req-form',
+  'blocks/cross-round-button',
+  'blocks/search-overlay',
+  'blocks/search-button',
+  'blocks/mobile-overlay',
+  'blocks/cross-button',
+  'blocks/burger-button',
+  'blocks/button',
+  'blocks/header',
+  'blocks/about',
+  'blocks/work',
+  'blocks/ques',
+  'blocks/footer'

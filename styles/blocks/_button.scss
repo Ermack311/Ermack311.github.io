@@ -1,0 +1,91 @@
+.button {
+  @include flex-center(true);
+
+  height: var(--button-hight);
+  padding-inline: 38px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: currentColor;
+  border-radius: var(--border-radius);
+
+  @include hover {
+    background-color: var(--color-orange-light);
+  }
+
+  @include tablet {
+    @include hover {
+      background-color: var(--color-orange-dark);
+    }
+  }
+
+  &:active {
+    background-color: var(--color-orange-dark);
+  }
+
+  &--search {
+    padding: 0;
+    background-color: var(--color-light);
+
+    @include hover {
+      background-color: var(--color-light);
+    }
+
+    & > * {
+      @include hover {
+        color: var(--color-orange);
+        transition-duration: var(--transition-duration);
+      }
+    }
+  }
+
+  &--slider {
+    height: auto;
+    padding-block: 25px;
+    font-size: 28px;
+
+    @include mobile-m{
+      padding-block: 13px;
+      font-size: 12px;
+    }
+  }
+
+  &--transparent{
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    border: 3px solid var(--color-orange);
+
+    @include mobile-m{
+      padding-inline: 44px;
+      padding-block: 12px;
+      font: 700 12px var(--font-family);
+      color:var(--color-orange);
+    }
+
+    &-work{
+      background-color: rgba($color: #000000, $alpha: 0.0);
+      border: 1px solid var(--color-dark);
+      color: var(--color-dark);
+      font: 400 16px var(--font-family);
+      text-align: center;
+
+      @include hover{
+        background-color: var(--color-grey);
+        color: var(--color-white);
+      }
+
+      &:active{
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      @include mobile-s{
+        padding-inline: 32px;
+        padding-block: 12px;
+        font: 400 12px var(--font-family);
+      }
+    }
+    
+  }
+}

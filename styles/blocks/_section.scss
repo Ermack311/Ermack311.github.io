@@ -1,0 +1,28 @@
+.section {
+  &--hidden-x {
+    overflow-x: hidden;
+  }
+  
+  &__slider {
+    margin-top: 50px;
+  }
+
+  &__about {
+    margin-top: 50px;
+  }
+
+  &__work{
+    margin-top: 110px;
+  }
+
+  &__ques{
+    margin-top: 96px;
+  }
+
+  
+  &__head {
+    &-title {
+      color: var(--color-dark);
+    }
+  }
+}
